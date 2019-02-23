@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Teats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Teat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teats.each do |teat| %>
+      <tr>
+        <td><%= teat.teat %></td>
+        <td><%= link_to 'Show', teat %></td>
+        <td><%= link_to 'Edit', edit_teat_path(teat) %></td>
+        <td><%= link_to 'Destroy', teat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Teat', new_teat_path %>

@@ -1,0 +1,2 @@
+class Teat < ApplicationRecord
+end
